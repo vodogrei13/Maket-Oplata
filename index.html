@@ -27,12 +27,12 @@
 
           <div class="cards__dostavka">
             <div class="card__dostavka">
-              <img src="car.png" alt="Машина" class="car__img"> 
+              <img src="car.png" alt="Машина" class="car__img" id="car-img"> 
               <p class="text__dostavka">Автотранспортом собственного автопарка</p>
             </div>
 
             <div class="card__dostavka">
-              <img src="gaz.png" alt="Газель" class="gaz__img"> 
+              <img src="gaz.png" alt="Газель" class="gaz__img" id="gaz-img"> 
               <p class="text__dostavka">Транспортными компаниями-партнерами</p>
             </div>
           </div>
@@ -100,5 +100,29 @@
         <img src="footer.png" alt="footer" class="footer">
       </div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const carImg = document.getElementById('car-img');
+          const gazImg = document.getElementById('gaz-img');
+          
+          function addAnimation(element) {
+              if (!element.classList.contains('animated')) {
+                  element.classList.add('animated');
+                  
+                  element.addEventListener('animationend', function() {
+                      element.classList.remove('animated');
+                  }, { once: true });
+              }
+          }
+          
+          carImg.addEventListener('mouseenter', function() {
+              addAnimation(this);
+          });
+          
+          gazImg.addEventListener('mouseenter', function() {
+              addAnimation(this);
+          });
+      });
+    </script>
   </body>
 </html>

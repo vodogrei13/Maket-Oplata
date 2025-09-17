@@ -148,12 +148,11 @@
     background-color: #f2f2f2;
     justify-content: center;
     margin: 2rem 0 2rem 1rem;
-    transition: transform 0.3s ease-in-out;
     position: relative; 
     z-index: 1;
 }
 
-.car__img:hover {
+.car__img.animated {
     animation: carDrive 1.2s ease-in-out;
 }
 
@@ -164,12 +163,11 @@
     background-color: #f2f2f2;
     justify-content: center;
     margin: 2rem 0 2rem 1rem;
-    transition: transform 0.3s ease-in-out;
     position: relative; 
     z-index: 1;
 }
 
-.gaz__img:hover {
+.gaz__img.animated {
     animation: carDrive 1.2s ease-in-out;
 }
 .text__dostavka {
@@ -292,5 +290,6 @@
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
     }
 }
